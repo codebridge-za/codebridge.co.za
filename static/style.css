@@ -6,8 +6,40 @@ body {
 	background-color: #fff;
 }
 
-#page {
-  margin: 0 auto;
-  width: 960px;
+body, html {
+  margin-bottom: none;
+  padding-bottom: none;
 }
 
+#content {
+}
+
+#page {
+  margin: 0 auto;
+  width: 640px;
+}
+
+#menu {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+strong {
+  color: #000;
+  font-weight: normal;
+}
+
+a, a:active, a:visited {
+  color: #1122CC;
+}
+a:hover {
+  color: #3355FF;
+}
+
+#footer {
+  border-top: 1px solid #ddd;
+  background-color: #eee;
+  padding: 8px;
+  color: #000;
+}
