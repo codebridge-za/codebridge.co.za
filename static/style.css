@@ -12,11 +12,16 @@ body, html {
 }
 
 #content {
+  padding-bottom: 40px;
 }
 
 #page {
   margin: 0 auto;
   width: 640px;
+
+  /* @TODO: Footer always at bottom
+  min-height: 100%;
+  */
 }
 
 #menu {
@@ -42,4 +47,10 @@ a:hover {
   background-color: #eee;
   padding: 8px;
   color: #000;
+
+  /* @TODO: Footer always at bottom
+  position: absolute;
+  bottom: 0px;
+  height: 30px;
+  */
 }
