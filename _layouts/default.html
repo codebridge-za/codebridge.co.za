@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{code}bridge{% if page.title %} - {{ page.title }}{% endif %}</title>
+      <meta name="viewport" content="width=device-width">
+
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/css/main.css" type="text/css" rel="stylesheet" media="screen" />
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+  </head>
+  <body>
+    <div id="page">
+      <h1>{code}bridge</h1>
+      <div id="menu">
+        {% if page.url == "/index.htm" %}
+        <strong>Home</strong> 
+        {% else %}
+        <a href="/index.htm">Home</a> 
+        {% endif %}
+
+        {% for node in site.navigation %}
+          | 
+          {% if page.url == node.url %}
+            <strong>{{ node.text }}</strong>
+          {% else %}
+            <a href="{{ node.url }}">{{ node.text }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div id="content">
+        {{ content }}
+      </div>
+  <div id="footer">
+    Something look off? <a href="https://github.com/codebridge-za/codebridge-za.github.io">Send a pull request!</a>
+  </div>
+    </div>
+  </body>
+</html>

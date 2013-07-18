@@ -1,0 +1,15 @@
+name: "{code}bridge"
+markdown: redcarpet
+pygments: true
+
+navigation:
+- text: Directions
+  url: /directions.htm
+- text: Events
+  url: /events.htm
+- text: Calendar
+  url: /calendar.htm
+- text: Discussions
+  url: /discussions.htm
+
+permalink: /:categories/:year-:month-:day/:title.htm

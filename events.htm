@@ -1,32 +1,13 @@
-<!doctype html>
-<html>
-  <head>
-    <title>{code}bridge - Events</title>
-    <link rel="shortcut icon" href="http://www.codebridge.co.za/favicon.ico" />
-    <link href="static/style.css" type="text/css" rel="stylesheet" media="screen" />
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-  </head>
-  <body>
-    <div id="page">
-      <h1>{code}bridge</h1>
-      <div id="menu">
-        <a href="/index.htm">Home</a> | <a href="/directions.htm">Directions</a> | <strong>Events</strong> | <a href="/calendar.htm">Calendar</a> 
-      </div>
-      <div id="content">
-        <h2>Events</h2>
+---
+layout: default
+title: Events
+---
 
-        <p>Please check the <a href="/calendar.htm">calendar</a> for a full booking schedule.</a>
-
-        <p>
-          <h3>July 2013</h3>
-          <strong>Tuesday 23rd: </strong> <a href="/events/2013-07/23-architecture-meetup-chef.htm">Architecture meetup - Chep</a><br/>
-          <strong>Thursday 11th: </strong>: <a href="/events/2013-07-11/planning-meetup.htm">{codebridge} Planning Meetup</a><br/>
-        </p>
-      </div>
-  <div id="footer">
-    Something look off? <a href="https://github.com/codebridge-za/codebridge-za.github.io">Send a pull request!</a>
-  </div>
-    </div>
-  </body>
-</html>
-
+<div id="home">
+  <h1>Events</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
