@@ -30,9 +30,14 @@ body, html {
   padding-bottom: 5px;
 }
 
-strong {
+p strong {
   color: #000;
   font-weight: normal;
+}
+
+a strong {
+  color: inherit;
+  font-weight: bold;
 }
 
 a, a:active, a:visited {
@@ -42,6 +47,13 @@ a:hover {
   color: #3355FF;
 }
 
+a.external {
+  color: #707780;
+}
+
+a.external:hover {
+  color: #113399;
+}
 #footer {
   border-top: 1px solid #ddd;
   background-color: #eee;
