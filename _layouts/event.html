@@ -5,3 +5,8 @@ permalink: /events/:year-:month-:day/:title.htm
 <!-- <p class="meta">{{ page.date | date_to_string }}</p> -->
 
 {{ content }}
+
+{% if page.facebook %}
+<p>If you use Facebook, you can RSVP to the event here: <a href="{{page.facebook}}">{{page.facebook}}</a></p>
+<p>Otherwise, we hope to see you there!</p>
+{% endif %}
