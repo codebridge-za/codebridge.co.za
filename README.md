@@ -1,18 +1,24 @@
 codebridge-za.github.io
 =======================
 
-To develop on the codebridge.co.za Jekyll site, simply run:
+The codebridge.co.za website runs off Jekyll. After installation of Jekyll to
+start the website simply run:
 
-	vagrant up
+	jekyll serve --watch
+
+## Getting set up with Vagrant
+
+If you have any issues using Jekyll, we have a Vagrant configuration that will 
+get you up and running without any issues. After installing 
+[Vagrant](http://www.vagrantup.com/) just run
+
+  vagrant up
 
 The first run might take a few minutes as Vagrant downloads Ubuntu (Precise 64-bit), installs jekyll and any dependencies. Finally, Vagrant starts Jekyll on port 4000 by running `jekyll serve --watch`, which will also reload any changes you make.
 
 Visit http://localhost:4000/ in a web browser to view the site :)
 
-## What about shell access?
+You can get shell access through the following command
 
 	vagrant ssh
 
-## Requirements
-
- - [Vagrant](http://www.vagrantup.com/)
