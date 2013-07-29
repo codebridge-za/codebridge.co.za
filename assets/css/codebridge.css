@@ -1,0 +1,14 @@
+html {
+    font-size: 1.1em;
+}
+
+body {
+    position: relative; /* For scrollyspy */
+    padding-top: 50px; /* Account for fixed navbar */
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.62em;
+}
+
+p {
+    max-width: 40em;
+}
