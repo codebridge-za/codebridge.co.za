@@ -3,6 +3,8 @@ markdown: redcarpet
 pygments: true
 
 navigation:
+- text: Home
+  url: /index.htm
 - text: Directions
   url: /directions.htm
 - text: Events
