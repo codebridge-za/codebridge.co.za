@@ -5,13 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>{code}bridge{% if page.title %} - {{ page.title }}{% endif %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- syntax highlighting CSS -->
-	<link rel="stylesheet" href="/css/syntax.css">
-
+	
 	<!-- Custom CSS -->
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen" />
+	<link rel="stylesheet" href="/css/journal.bootstrap.css">	<!-- customize bootstrap with bootswatch -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel='stylesheet' type="text/css">
 	<link href="/assets/css/codebridge.css" type="text/css" rel="stylesheet" media="screen" />
 
@@ -42,9 +40,8 @@
     </div>
   </div>
 </div>
-<div class="container">
-	{{ content }}
-</div>
+
+{{ content }}
 
 <div class="container">
 	<footer>
