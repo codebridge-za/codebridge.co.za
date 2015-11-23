@@ -1,0 +1,445 @@
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* BODY, FOOTER AND GENERAL
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+html,
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Yeseva One', cursive;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #212121;
+    /* GREY 900 */
+}
+footer span {
+    color: white;
+    line-height: 60px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFEB3B;
+    /* YELLOW 500 */
+}
+
+footer a:hover,
+footer a:visited,
+footer a:focus {
+    color: #FFF59D;
+    /* YELLOW 200 */
+}
+
+.donate,
+.contact {
+    margin: 60px auto;
+    min-height: calc(100% - 180px);
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: INTRODUCTION
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.intro-header {
+    text-align: center;
+    color: #f8f8f8;
+    background: url('../img/code.compressed.20151123v1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 48vh 0;
+}
+
+.intro-message {
+    position: relative;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 5em;
+}
+
+.intro-message span {
+    color: #FFEB3B;
+}
+
+.intro-message > p {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1.2em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: ABOUT
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.about {
+    margin: 15vh auto;
+}
+
+.about p {
+    font-size: 1.4em;
+}
+
+.about .video-caption {
+    margin-top: 1em;
+}
+
+.about .video-caption .sub-header {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: 700;
+    float: right;
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: MEMBERSHIP
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.membership {
+    margin: 10vh auto;
+}
+
+.membership .summary {
+    top: 5vh;
+    font-size: 2em;
+}
+
+.price_table_container {
+    text-align: center;
+    color: #666;
+    margin-top: 35px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.price_table_heading {
+    font-size: 36px;
+    padding: 10px;
+    background: #EEE;
+}
+
+.price_table_row {
+    padding: 15px;
+    background: #FFF;
+}
+
+.cost {
+    padding: 30px;
+    font-size: 30px;
+}
+
+.cost span {
+    font-size: 15px;
+}
+
+.price_table_row:nth-of-type(even) {
+    background: #F8F8F8;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.recommended {
+    background: #FF3A3A;
+    color: #FFF;
+    padding: 3px 0 3px 0;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: -35px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.spacer {
+    width: 100%;
+    height: 50px;
+}
+
+.primary-bg {
+    background: #337AB7;
+    color: #FFF;
+}
+
+.success-bg {
+    background: #5CB85C;
+    color: #FFF;
+}
+
+.info-bg {
+    background: #5BC0DE;
+    color: #FFF;
+}
+
+.warning-bg {
+    background: #F0AD4E;
+    color: #FFF;
+}
+
+.danger-bg {
+    background: #D9534F;
+    color: #FFF;
+}
+
+.dark-bg {
+    background: #444;
+    color: #FFF;
+}
+
+.royal-bg {
+    background: #8E74E2;
+    color: #FFF;
+}
+
+.static-bg {
+    background: #2BB0A6;
+    color: #FFF;
+}
+
+.primary-text {
+    background: #FFF;
+    color: #337AB7;
+}
+
+.success-text {
+    background: #FFF;
+    color: #5CB85C;
+}
+
+.info-text {
+    background: #FFF;
+    color: #5BC0DE;
+}
+
+.warning-text {
+    background: #FFF;
+    color: #F0AD4E;
+}
+
+.danger-text {
+    background: #FFF;
+    color: #D9534F;
+}
+
+.dark-text {
+    background: #FFF;
+    color: #444;
+}
+
+.royal-text {
+    background: #FFF;
+    color: #8E74E2;
+}
+
+.static-text {
+    background: #FFF;
+    color: #2BB0A6;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #444;
+    border-color: #444;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark.focus,
+.btn-dark:active,
+.btn-dark.active,
+.open > .dropdown-toggle.btn-dark {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.btn-dark:active,
+.btn-dark.active,
+.open > .dropdown-toggle.btn-dark {
+    background-image: none;
+}
+
+.btn-royal {
+    color: #fff;
+    background-color: #8E74E2;
+    border-color: #8E74E2;
+}
+
+.btn-royal:hover,
+.btn-royal:focus,
+.btn-royal.focus,
+.btn-royal:active,
+.btn-royal.active,
+.open > .dropdown-toggle.btn-royal {
+    color: #fff;
+    background-color: #7451E8;
+    border-color: #7451E8;
+}
+
+.btn-royal:active,
+.btn-royal.active,
+.open > .dropdown-toggle.btn-royal {
+    background-image: none;
+}
+
+.btn-static {
+    color: #fff;
+    background-color: #2BB0A6;
+    border-color: #2BB0A6;
+}
+
+.btn-static:hover,
+.btn-static:focus,
+.btn-static.focus,
+.btn-static:active,
+.btn-static.active,
+.open > .dropdown-toggle.btn-static {
+    color: #fff;
+    background-color: #07A094;
+    border-color: #07A094;
+}
+
+.btn-static:active,
+.btn-static.active,
+.open > .dropdown-toggle.btn-static {
+    background-image: none;
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: JOIN
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.join {
+    padding: 10vh 0;
+    background: #FFEB3B;
+    /* YELLOW 500 */
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: SPONSORS
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.sponsors {
+    margin: 16vh auto;
+}
+
+.sponsors .summary {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 700;
+    top: 8vh;
+}
+
+.sponsors img {
+    background-color: #FFEE58;
+    /* YELLOW 400*/
+    width: 200px;
+    transition: all .5s ease 0s;
+}
+
+.sponsors img:hover {
+    background-color: #3F51B5;
+    /* INDIGO 500 */
+}
+
+.sponsors h4 {
+    font-family: 'Yeseva One', cursive;
+}
+
+.sponsors p {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* PAGES
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.donate .summary {
+    font-size: 1.2em;
+    margin: 10vh auto;
+}
+
+.donate img {
+    height: 200px;
+}
+
+.events {
+    margin: 60px auto;
+}
+
+.events iframe {
+    min-width: 100%;
+    min-height: calc(100vh - 180px);
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* MEDIA QUERIES
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+@media (max-width:760px) {
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+    .membership .summary {
+        top: auto;
+        text-align: center;
+        margin-bottom: .5em;
+    }
+    .sponsors .summary {
+        top: auto;
+    }
+    .sponsors .company {
+        margin: 2em;
+    }
+    .sponsors .company:last-of-type {
+        margin-bottom: 0;
+    }
+    .donate .summary {
+        margin: 2vh auto;
+    }
+}

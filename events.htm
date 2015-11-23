@@ -1,18 +1,8 @@
 ---
-layout: default
+layout: default 
 title: Events
 ---
 
-<div id="home">
-  <h1>Events</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%A, %e %B" }}</span>:
-      <p><a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
-      {% if post.facebook %}(<a href="{{ post.facebook }}" class="external">facebook event</a>){% endif %}
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
+<div class="container events">
+    <iframe src="https://www.google.com/calendar/embed?src=srdsesliib1rp1rp0ub6cb3dpg%40group.calendar.google.com&title= &mode=MONTH&showTz=0&showTabs=0&showNav=0&wkst=1&bgcolor=white&color=blue&showPrint=0&showCalendars=0&ctz=Africa/Johannesburg" frameborder="0" scrolling="no"></iframe>
 </div>
