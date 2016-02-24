@@ -5,9 +5,12 @@ pygments: true
 navigation:
 - text: Home
   url: /index.htm
-- text: Directions
-  url: /directions.htm
+- text: Contact us
+  url: /contact-us.htm
 - text: Calendar
   url: /calendar.htm
+- text: Code4SA
+  url: /code4sa.htm
+
 
 permalink: /:categories/:year-:month-:day/:title.htm
