@@ -8,5 +8,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell,
     :inline => "sudo apt-get -y install build-essential && sudo /opt/vagrant_ruby/bin/gem install jekyll rdiscount --no-ri --no-rdoc"
   config.vm.provision :shell,
-    :inline => "cd /vagrant && jekyll serve --watch"
+    :inline => "cd /vagrant && jekyll serve"
 end

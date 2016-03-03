@@ -1,57 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>{code}bridge{% if page.title %} - {{ page.title }}{% endif %}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- syntax highlighting CSS -->
-	<link rel="stylesheet" href="/css/syntax.css">
+{% include head.html %}
 
-	<!-- Custom CSS -->
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen" />
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel='stylesheet' type="text/css">
-	<link href="/assets/css/codebridge.css" type="text/css" rel="stylesheet" media="screen" />
-
-</head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
-  <div class="container">
-    <a href="/" class="navbar-brand">{code}bridge</a>
-    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <div class="nav-collapse collapse bs-navbar-collapse">
-      <ul class="nav navbar-nav">
-		{% for node in site.navigation %}
-		{% if page.url == node.url %}
-	      <li class="active">
-			<a href="{{ node.url }}">{{ node.text }}</a>
-		  </li>
-		{% else %}
-		  <li>
-			<a href="{{ node.url }}">{{ node.text }}</a>
-	      </li>
-		{% endif %}
-		{% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="container">
-	{{ content }}
-</div>
 
-<div class="container">
-	<footer>
-		Something look off? <a href="https://github.com/codebridge-za/codebridge-za.github.io">Send a pull request!</a>
-	</footer>
-</div>
-<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
+    {% include header.html %} 
+    
+    {{ content }} 
+    
+    {% include footer.html %}
+
 </body>
+
 </html>
