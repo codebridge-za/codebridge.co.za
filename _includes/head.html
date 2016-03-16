@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- OPEN-GRAPH -->
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:image" content="{{ 'images/header.jpg' | prepend: site.url }}" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="{{ site.og_description }}" />
+    <meta property="og:site_name" content="{code}bridge" />
+    <meta property="place:location:latitude" content="{{ site.og_latitude }}" />
+    <meta property="place:location:longitude" content="{{ site.og_longitude }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ site.twitter_username }}" />
+    <meta name="twitter:creator" content="{{ site.twitter_username }}" />
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.og_description }}">
+    <meta name="twitter:url" content="{{ site.url }}" />
+    <meta name="twitter:image" content="{{ 'images/header.jpg' | prepend: site.url }}">
+
+    <link href="{{ 'favicon.ico' | prepend: site.baseurl }}" rel="shortcut icon" />
+    <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+
+    <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link href="{{ 'assets/css/bootstrap-3.3.5.min.css' | prepend: site.baseurl }}" rel="stylesheet" />
+    <link href="{{ 'assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet" />
+
+</head>

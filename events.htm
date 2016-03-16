@@ -1,18 +1,17 @@
 ---
-layout: default
+layout: default 
 title: Events
 ---
+<div class="container contact">
+<div class="row">
+<div class="col-xs-12">
+<h3>Events at {code}bridge</h3>
 
-<div id="home">
-  <h1>Events</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%A, %e %B" }}</span>:
-      <p><a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
-      {% if post.facebook %}(<a href="{{ post.facebook }}" class="external">facebook event</a>){% endif %}
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
+<p>Keep an eye on the website or our <a href=/contact.htm>social media</a> for more upcoming events and hackathons.<p/>
+
+<div class="container events">
+<iframe src="https://calendar.google.com/calendar/embed?title=%20&amp;wkst=2&amp;src=srdsesliib1rp1rp0ub6cb3dpg%40group.calendar.google.com&amp;ctz=Africa%2FJohannesburg" style="border-width:0" width="100%" height="50%" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+</div>
 </div>

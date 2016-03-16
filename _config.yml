@@ -1,13 +1,33 @@
-name: "{code}bridge"
-markdown: redcarpet
-pygments: true
+# METADATA
+title: "{code}bridge"
+email: community@code4sa.org
+description: We're a civic tech incubator with a mission to bridge the gap between grassroots activism, technology and data.
+baseurl: "/"
+url: "http://codebridge.co.za/"
 
+# OPEN GRAPH
+## OG Description must be 125 characters or less
+og_description: We're a civic tech incubator with a mission to bridge the gap between grassroots activism, technology and data.
+og_latitude: -33.976608
+og_longitude: 18.46662
+twitter_username: "@codebridge"
+github_username: codebridge-za
+facebook_page: codebridge
+
+# NAVIGATION
 navigation:
-- text: Home
-  url: /index.htm
-- text: Directions
-  url: /directions.htm
-- text: Calendar
-  url: /calendar.htm
+- text: Events
+  url: /events.htm
+- text: Contact
+  url: /contact.htm
+- text: Code4SA
+  url: /code4sa.htm
 
+# BUILD SETTINGS
 permalink: /:categories/:year-:month-:day/:title.htm
+
+# EXCLUDE
+exclude: [CNAME, Vagrantfile, README.md]
+
+#RESOURCES USED
+## Header image - https://unsplash.com/
