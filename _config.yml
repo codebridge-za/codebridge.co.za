@@ -14,15 +14,6 @@ twitter_username: "@codebridge"
 github_username: codebridge-za
 facebook_page: codebridge
 
-# NAVIGATION
-navigation:
-- text: Events
-  url: /events.htm
-- text: Contact
-  url: /contact.htm
-- text: Code4SA
-  url: /code4sa.htm
-
 # BUILD SETTINGS
 permalink: /:categories/:year-:month-:day/:title.htm
 
