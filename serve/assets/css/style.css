@@ -26,16 +26,12 @@ footer span {
     text-align: center;
 }
 footer a {
-    color: #ba4141;
+    color: #FFEB3B;
 }
 footer a:hover,
 footer a:visited,
 footer a:focus {
-    color: #ba4141;
-}
-
-.thumbnail{
-    border: 0;
+    color: #FFF59D;
 }
 
 .navbar-brand{
@@ -45,14 +41,10 @@ footer a:focus {
     margin: 60px auto;
     min-height: calc(100% - 180px);
 }
-.partners {
+.code4sa {
     margin: 60px auto;
     min-height: calc(100% - 180px);
 }
-.events {
-    padding-bottom: 15px;
-}
-
 .intro-header {
     text-align: center;
     color: #f8f8f8;
@@ -236,15 +228,14 @@ footer a:focus {
 .open>.dropdown-toggle.btn-static {
     background-image: none;
 }
-.calendar {
+.events {
     margin: 0px auto;
 }
-.calendar iframe {
+.events iframe {
     min-width: 100%;
     min-height: calc(100vh - 100px);
 }
-
 @media(max-width:760px) {
     .intro-message>h1 {
         font-size: 3em;
-}
+    }

@@ -9,15 +9,24 @@
             </button>
             <a class="navbar-brand" href="{{ site.baseurl }}">{{ site.title }}</a>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">{% for node in site.navigation %}{% if page.url == node.url %}
-                <li class="active">
-                    <a href="{{ node.url }}">{{ node.text }}</a>
-                </li>{% else %}
-                <li>
-                    <a href="{{ node.url }}">{{ node.text }}</a>
-                </li>{% endif %} {% endfor %}
-            </ul>
+     <ul class="nav navbar-nav navbar-right">
+       <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Events <b class="caret"></b></a>
+         <ul class="dropdown-menu">
+    <li><a href="/events.htm"><b>Upcoming events</b></a></li>
+    <li><a href="/hack4water.htm">#Hack4Water challenge</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="/events.htm#pastevents">Past events</a></li>
+           <li>
+<div class="row">
+	   </li>
+         </ul>
+		<li><a href="/calendar.htm">Calendar</a></li>
+                <li><a href="/contact.htm">Contact</a></li>
+                <li><a href="/partners.htm">Partners</a></li>
+	 </ul>
         </div>
     </div>
 </nav>
