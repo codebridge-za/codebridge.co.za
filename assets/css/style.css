@@ -34,6 +34,10 @@ footer a:focus {
     color: #ba4141;
 }
 
+.panel{
+   border: 0;
+}
+
 .thumbnail{
     border: 0;
 }
