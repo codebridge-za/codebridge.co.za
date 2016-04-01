@@ -34,6 +34,17 @@ footer a:focus {
     color: #ba4141;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+.panel{
+   border: 0;
+}
+
 .thumbnail{
     border: 0;
 }
