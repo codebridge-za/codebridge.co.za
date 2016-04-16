@@ -9,6 +9,20 @@
             </button>
             <a class="navbar-brand" href="{{ site.baseurl }}">{{ site.title }}</a>
         </div>
+<<<<<<< HEAD
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">{% for node in site.navigation %}{% if page.url == node.url %}
+                <li class="active">
+                    <a href="{{ node.url }}">{{ node.text }}</a>
+                </li>{% else %}
+                <li>
+                    <a href="{{ node.url }}">{{ node.text }}</a>
+                </li>{% endif %} {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
+=======
 
         <div id="navbar" class="navbar-collapse collapse">
      <ul class="nav navbar-nav navbar-right">
@@ -31,3 +45,4 @@
         </div>
     </div>
 </nav>
+>>>>>>> codebridge-za/master

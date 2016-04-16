@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* BODY, FOOTER AND GENERAL
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+html,
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+=======
 html,
 body {
     font-family: 'Open Sans', sans-serif;
@@ -7,18 +24,48 @@ body {
     background-color: #FFF;
     color: #000;
 }
+>>>>>>> codebridge-za/master
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+<<<<<<< HEAD
+    font-family: 'Yeseva One', cursive;
+}
+
+=======
     font-family: 'Droid Serif', serif;
 }
+>>>>>>> codebridge-za/master
 footer {
     width: 100%;
     height: 60px;
     background-color: #212121;
+<<<<<<< HEAD
+    /* GREY 900 */
+}
+footer span {
+    color: white;
+    line-height: 60px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFEB3B;
+    /* YELLOW 500 */
+}
+
+footer a:hover,
+footer a:visited,
+footer a:focus {
+    color: #FFF59D;
+    /* YELLOW 200 */
+}
+
+.donate,
+=======
 }
 footer span {
     color: #FFF;
@@ -52,10 +99,20 @@ a.anchor {
 .navbar-brand{
     font-family: 'Droid Serif', serif;
 }
+>>>>>>> codebridge-za/master
 .contact {
     margin: 60px auto;
     min-height: calc(100% - 180px);
 }
+<<<<<<< HEAD
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: INTRODUCTION
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+=======
 .partners {
     margin: 60px auto;
     min-height: calc(100% - 180px);
@@ -63,25 +120,51 @@ a.anchor {
 .events {
     padding-bottom: 15px;
 }
+>>>>>>> codebridge-za/master
 
 .intro-header {
     text-align: center;
     color: #f8f8f8;
+<<<<<<< HEAD
+    background: url('../img/code.compressed.20151123v1.jpg');
+=======
     background: url('../../images/header.jpg');
+>>>>>>> codebridge-za/master
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
     padding: 48vh 0;
 }
+<<<<<<< HEAD
+
+.intro-message {
+    position: relative;
+}
+
+.intro-message > h1 {
+=======
 .intro-message {
     position: relative;
 }
 .intro-message>h1 {
+>>>>>>> codebridge-za/master
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 5em;
 }
+<<<<<<< HEAD
+
+.intro-message span {
+    color: #FFEB3B;
+}
+
+.intro-message > p {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1.2em;
+}
+
+=======
 .intro-message span {
     color: #AB1B1B;
 }
@@ -89,11 +172,34 @@ a.anchor {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 1.4em;
 }
+>>>>>>> codebridge-za/master
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+<<<<<<< HEAD
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: ABOUT
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.about {
+    margin: 15vh auto;
+}
+
+.about p {
+    font-size: 1.4em;
+}
+
+.about .video-caption {
+    margin-top: 1em;
+}
+
+=======
 .about {
     margin: 60px auto;
 }
@@ -103,13 +209,72 @@ a.anchor {
 .about .video-caption {
     margin-top: 1em;
 }
+>>>>>>> codebridge-za/master
 .about .video-caption .sub-header {
     font-family: 'Merriweather', serif;
     font-style: italic;
     font-size: 1em;
+<<<<<<< HEAD
+    font-weight: 700;
+    float: right;
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: MEMBERSHIP
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.membership {
+    margin: 10vh auto;
+}
+
+.membership .summary {
+    top: 5vh;
+    font-size: 2em;
+}
+
+.price_table_container {
+    text-align: center;
+    color: #666;
+    margin-top: 35px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.price_table_heading {
+    font-size: 36px;
+    padding: 10px;
+    background: #EEE;
+}
+
+.price_table_row {
+    padding: 15px;
+    background: #FFF;
+}
+
+.cost {
+    padding: 30px;
+    font-size: 30px;
+}
+
+.cost span {
+    font-size: 15px;
+}
+
+.price_table_row:nth-of-type(even) {
+    background: #F8F8F8;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+=======
     font-weight: 600;
     float: right;
 }
+>>>>>>> codebridge-za/master
 .recommended {
     background: #FF3A3A;
     color: #FFF;
@@ -119,129 +284,360 @@ a.anchor {
     margin-bottom: -35px;
     font-family: 'Open Sans', sans-serif;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .spacer {
     width: 100%;
     height: 50px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .primary-bg {
     background: #337AB7;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .success-bg {
     background: #5CB85C;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .info-bg {
     background: #5BC0DE;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .warning-bg {
     background: #F0AD4E;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .danger-bg {
     background: #D9534F;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .dark-bg {
     background: #444;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .royal-bg {
     background: #8E74E2;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .static-bg {
     background: #2BB0A6;
     color: #FFF;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .primary-text {
     background: #FFF;
     color: #337AB7;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .success-text {
     background: #FFF;
     color: #5CB85C;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .info-text {
     background: #FFF;
     color: #5BC0DE;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .warning-text {
     background: #FFF;
     color: #F0AD4E;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .danger-text {
     background: #FFF;
     color: #D9534F;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .dark-text {
     background: #FFF;
     color: #444;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .royal-text {
     background: #FFF;
     color: #8E74E2;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .static-text {
     background: #FFF;
     color: #2BB0A6;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .btn-dark {
     color: #fff;
     background-color: #444;
     border-color: #444;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark.focus,
 .btn-dark:active,
 .btn-dark.active,
+<<<<<<< HEAD
+.open > .dropdown-toggle.btn-dark {
+=======
 .open>.dropdown-toggle.btn-dark {
+>>>>>>> codebridge-za/master
     color: #fff;
     background-color: #222;
     border-color: #222;
 }
+<<<<<<< HEAD
+
+.btn-dark:active,
+.btn-dark.active,
+.open > .dropdown-toggle.btn-dark {
+    background-image: none;
+}
+
+=======
 .btn-dark:active,
 .btn-dark.active,
 .open>.dropdown-toggle.btn-dark {
     background-image: none;
 }
+>>>>>>> codebridge-za/master
 .btn-royal {
     color: #fff;
     background-color: #8E74E2;
     border-color: #8E74E2;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .btn-royal:hover,
 .btn-royal:focus,
 .btn-royal.focus,
 .btn-royal:active,
 .btn-royal.active,
+<<<<<<< HEAD
+.open > .dropdown-toggle.btn-royal {
+=======
 .open>.dropdown-toggle.btn-royal {
+>>>>>>> codebridge-za/master
     color: #fff;
     background-color: #7451E8;
     border-color: #7451E8;
 }
+<<<<<<< HEAD
+
+.btn-royal:active,
+.btn-royal.active,
+.open > .dropdown-toggle.btn-royal {
+    background-image: none;
+}
+
+=======
 .btn-royal:active,
 .btn-royal.active,
 .open>.dropdown-toggle.btn-royal {
     background-image: none;
 }
+>>>>>>> codebridge-za/master
 .btn-static {
     color: #fff;
     background-color: #2BB0A6;
     border-color: #2BB0A6;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> codebridge-za/master
 .btn-static:hover,
 .btn-static:focus,
 .btn-static.focus,
 .btn-static:active,
 .btn-static.active,
+<<<<<<< HEAD
+.open > .dropdown-toggle.btn-static {
+=======
 .open>.dropdown-toggle.btn-static {
+>>>>>>> codebridge-za/master
     color: #fff;
     background-color: #07A094;
     border-color: #07A094;
 }
+<<<<<<< HEAD
+
+.btn-static:active,
+.btn-static.active,
+.open > .dropdown-toggle.btn-static {
+    background-image: none;
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: JOIN
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.join {
+    padding: 10vh 0;
+    background: #FFEB3B;
+    /* YELLOW 500 */
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* INDEX: SPONSORS
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.sponsors {
+    margin: 16vh auto;
+}
+
+.sponsors .summary {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 700;
+    top: 8vh;
+}
+
+.sponsors img {
+    background-color: #FFEE58;
+    /* YELLOW 400*/
+    width: 200px;
+    transition: all .5s ease 0s;
+}
+
+.sponsors img:hover {
+    background-color: #3F51B5;
+    /* INDIGO 500 */
+}
+
+.sponsors h4 {
+    font-family: 'Yeseva One', cursive;
+}
+
+.sponsors p {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* PAGES
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.donate .summary {
+    font-size: 1.2em;
+    margin: 10vh auto;
+}
+
+.donate img {
+    height: 200px;
+}
+
+.events {
+    margin: 60px auto;
+}
+
+.events iframe {
+    min-width: 100%;
+    min-height: calc(100vh - 180px);
+}
+
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* MEDIA QUERIES
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+@media (max-width:760px) {
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+    .membership .summary {
+        top: auto;
+        text-align: center;
+        margin-bottom: .5em;
+    }
+    .sponsors .summary {
+        top: auto;
+    }
+    .sponsors .company {
+        margin: 2em;
+    }
+    .sponsors .company:last-of-type {
+        margin-bottom: 0;
+    }
+    .donate .summary {
+        margin: 2vh auto;
+    }
+}
+=======
 .btn-static:active,
 .btn-static.active,
 .open>.dropdown-toggle.btn-static {
@@ -259,3 +655,4 @@ a.anchor {
     .intro-message>h1 {
         font-size: 3em;
 }
+>>>>>>> codebridge-za/master
