@@ -1,5 +1,6 @@
 # METADATA
 title: "{code}bridge"
+<<<<<<< HEAD
 email: your-email@domain.com
 ## Description must be 160 characters or less
 description: A civic technology lab, based in Cape Town Metro, that brings together programmers, hacktivists, data junkies and journalists to create apps for social change.
@@ -26,10 +27,27 @@ navigation:
 - text: Contact
   url: /contact.htm
 
+=======
+email: community@code4sa.org
+description: We're a civic tech incubator with a mission to bridge the gap between grassroots activism, technology and data.
+baseurl: "/"
+url: "http://codebridge.co.za/"
+
+# OPEN GRAPH
+## OG Description must be 125 characters or less
+og_description: We're a civic tech incubator with a mission to bridge the gap between grassroots activism, technology and data.
+og_latitude: -33.976608
+og_longitude: 18.46662
+twitter_username: "@codebridge"
+github_username: codebridge-za
+facebook_page: codebridge
+
+>>>>>>> codebridge-za/master
 # BUILD SETTINGS
 permalink: /:categories/:year-:month-:day/:title.htm
 
 # EXCLUDE
+<<<<<<< HEAD
 exclude: [CNAME, Vagrantfile, README.md, /assets/img/originals, /assets/css/style.css, /backup]
 
 #RESOURCES USED
@@ -39,3 +57,9 @@ exclude: [CNAME, Vagrantfile, README.md, /assets/img/originals, /assets/css/styl
 ## Font pairing - https://femmebot.github.io/google-type/
 ## Free Stock Images - https://unsplash.com/
 ## 7zip Extrator - http://www.kekaosx.com/en/ (OSX) or http://www.7-zip.org/ (WINDOWS)
+=======
+exclude: [CNAME, Vagrantfile, README.md]
+
+#RESOURCES USED
+## Header image - https://unsplash.com/
+>>>>>>> codebridge-za/master
