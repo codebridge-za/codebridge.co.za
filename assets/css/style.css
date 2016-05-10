@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400);
 html,
 body {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     height: 100%;
     overflow-x: hidden;
     background-color: #FFF;
@@ -187,6 +189,10 @@ a.anchor {
     background: #FFF;
     color: #2BB0A6;
 }
+.btn {
+    font-weight: 300;
+}
+
 .btn-dark {
     color: #fff;
     background-color: #444;
