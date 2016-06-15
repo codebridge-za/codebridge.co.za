@@ -22,3 +22,8 @@ exclude: [CNAME, Vagrantfile, README.md]
 
 #RESOURCES USED
 ## Header image - https://unsplash.com/
+
+##my collections
+collections:
+  allevents:
+    output: true
