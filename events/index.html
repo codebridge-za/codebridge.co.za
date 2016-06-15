@@ -12,7 +12,14 @@ title: Events}}
 			<div class="col-md-4">
 				<div class="thumbnail">
 					<h4><span class="label label-success">Date: {{event.date | date_to_long_string}}</span></h4>
-					<h4><a class="label label-success" href="../event-types.html" data-toggle="tooltip" data-placement="top" title="Click Me!"><i class="fa fa-info-circle"></i>  Type of Event: {{event.type}}</a><h4>
+					{% for evt in site.data.event_types %}
+						{% if evt.eventtype == event.type %}
+							<h4><a class="label label-success" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="fa fa-info-circle"></i>  Type of Event: {{event.type}}</a><h4>
+							{% break %}
+						{% else %}
+						{% endif %}
+					{% endfor %}
+
 					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
 					<h4>{{event.title}}</h4>
 					<p>{{event.description}}</p>
