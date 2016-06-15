@@ -27,3 +27,4 @@ exclude: [CNAME, Vagrantfile, README.md]
 collections:
   allevents:
     output: true
+  
