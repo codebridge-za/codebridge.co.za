@@ -11,6 +11,9 @@
  ga('create', 'UA-48399585-38', 'auto');
  ga('send', 'pageview');
 </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="{{ 'assets/js/bootstrap-3.3.5.min.js' | prepend: site.baseurl }}"></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<script type="text/javascript" src="/assets/js/moment.js"></script>
