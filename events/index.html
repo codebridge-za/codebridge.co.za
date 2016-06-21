@@ -7,9 +7,13 @@ title: Events}}
 	<div>
 		<a class="anchor" name="pastevents"></a><h3>Events</h3>
 	</div>
-	<div class="row">
-	{% for event in site.allevents reversed %}
-			<div class="col-md-4">
+
+	{% for event in site.allevents reversed%}
+  		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
+  			{% if modulo == '0' or forloop.first %}
+    			<div class="row">
+  			{% endif %}
+  				<div class="col-md-4">
 				<div class="thumbnail">
 					<h4><span class="label label-success">Date: {{event.date | date_to_long_string}}</span></h4>
 					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
@@ -24,6 +28,9 @@ title: Events}}
 					<p>{{event.description}}</p>
 				</div>
 			</div>
-	{% endfor %}
-	</div>
+  {% if modulo == '2' or forloop.last %}
+    </div>
+  {% endif %}
+
+{% endfor %}
 </div>
