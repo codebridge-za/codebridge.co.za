@@ -23,7 +23,7 @@ title: Events}}
 					<h4><a href="{{event.link}}">{{event.title}}:</a></h4>
 					{% for evt in site.data.event_types %}
 						{% if evt.eventtype == event.type %}
-							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="fa fa-info-circle"></i> {{event.type}}</a></h4>
+							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
 							{% break %}
 						{% else %}
 						{% endif %}
@@ -58,7 +58,7 @@ title: Events}}
 					<h4><a href="{{event.link}}">{{event.title}}:</a></h4>
 					{% for evt in site.data.event_types %}
 						{% if evt.eventtype == event.type %}
-							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="fa fa-info-circle"></i> {{event.type}}</a></h4>
+							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
 							{% break %}
 						{% else %}
 						{% endif %}
