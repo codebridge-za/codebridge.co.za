@@ -20,7 +20,7 @@ title: Events}}
 				<div class="thumbnail">
 					<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
 					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
-					<h4><a href="{{event.link}}">{{event.title}}:</a></h4>
+					<h4><a href="{{event.link}}">{{event.title}}</a></h4>
 					{% for evt in site.data.event_types %}
 						{% if evt.eventtype == event.type %}
 							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
@@ -55,7 +55,7 @@ title: Events}}
 				<div class="thumbnail">
 					<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
 					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
-					<h4><a href="{{event.link}}">{{event.title}}:</a></h4>
+					<h4><a href="{{event.link}}">{{event.title}}</a></h4>
 					{% for evt in site.data.event_types %}
 						{% if evt.eventtype == event.type %}
 							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
