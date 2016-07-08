@@ -4,7 +4,7 @@ title: Events
 ---
 
 <div class="container contact">
-	<div>
+	<div class="row">
 		<a class="anchor" name="pastevents"></a><h3>Upcoming Events</h3>
 	</div>
 
@@ -36,10 +36,11 @@ title: Events
     	{% endif %}
   		{% if modulo == '2' or forloop.last %}
     		</div>
+    		<div class="row">
   		{% endif %}
  	{% endfor %}
 
-
+ 	<br><hr>
 	<div>
 		<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
 	</div>
