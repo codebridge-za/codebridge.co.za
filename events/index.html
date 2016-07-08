@@ -1,6 +1,6 @@
 ---
 layout: default 
-title: Events}}
+title: Events
 ---
 
 <div class="container contact">
@@ -44,7 +44,7 @@ title: Events}}
 		<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
 	</div>
 
-	{% for event in site.allevents %}
+	{% for event in site.allevents reverse %}
   		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
   			{% if modulo == '0' or forloop.first %}
     			<div class="row">
