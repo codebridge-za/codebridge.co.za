@@ -5,72 +5,74 @@ title: Events
 
 <div class="container contact">
 	<div class="row">
-		<a class="anchor" name="pastevents"></a><h3>Upcoming Events</h3>
+		<a class="anchor" name="Upcoming Events"></a><h3>Upcoming Events</h3>
 	</div>
 
 	{% assign current_time = site.time | date: "%m%d" %}
 	{% for event in site.allevents limit 3 %}
-		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-  		{% if modulo == '0' or forloop.first %}
-    		<div class="row">
-  		{% endif %}
+	{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
+	{% if modulo == '0' or forloop.first %}
+	<div class="row event-list">
+		{% endif %}
 		{% assign expires = event.ev-date | date: "%m%d" %}
-    	{% if expires > current_time %}
-      		<div class="col-md-4">
-				<div class="thumbnail">
+		{% if expires > current_time %}
+		<div class="col-md-4">
+			<div class="box-content thumbnail">
+				<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
+				<img src="{{event.image}}" alt="{{event.title}}" width="100%">
+				<h4><a href="{{event.link}}">{{event.title}}</a></h4>
+				{% for evt in site.data.event_types %}
+				{% if evt.eventtype == event.type %}
+				<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
+				{% break %}
+				{% else %}
+				{% endif %}
+				{% endfor %}
+				<p>{{event.description}}</p>
+			</div>
+		</div>
+		{% else %}
+		{% continue %}
+		{% endif %}
+		{% if modulo == '2' or forloop.last %}
+	</div>
+	<div class="row">
+		{% endif %}
+		{% endfor %}
+
+		<br><hr>
+		<div>
+			<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
+		</div>
+
+		
+		{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
+		{% if modulo == '0' or forloop.first %}
+		<div class="row event-list">
+			{% endif %}
+			{% for event in site.allevents reverse %}
+			{% assign expires = event.ev-date | date: "%m%d" %}
+			{% if expires < current_time %}
+			<div class="col-md-4">
+				<div class="box-content thumbnail">
 					<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
 					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
 					<h4><a href="{{event.link}}">{{event.title}}</a></h4>
 					{% for evt in site.data.event_types %}
-						{% if evt.eventtype == event.type %}
-							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
-							{% break %}
-						{% else %}
-						{% endif %}
+					{% if evt.eventtype == event.type %}
+					<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
+					{% break %}
+					{% else %}
+					{% endif %}
 					{% endfor %}
 					<p>{{event.description}}</p>
 				</div>
 			</div>
-    	{% else %}
-      		{% continue %}
-    	{% endif %}
-  		{% if modulo == '2' or forloop.last %}
-    		</div>
-    		<div class="row">
-  		{% endif %}
- 	{% endfor %}
-
- 	<br><hr>
-	<div>
-		<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
-	</div>
-
-	{% for event in site.allevents reverse %}
-  		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-  			{% if modulo == '0' or forloop.first %}
-    			<div class="row">
-  			{% endif %}
-  			{% assign expires = event.ev-date | date: "%m%d" %}
-  			{% if expires < current_time %}
-  				<div class="col-md-4">
-				<div class="thumbnail">
-					<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
-					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
-					<h4><a href="{{event.link}}">{{event.title}}</a></h4>
-					{% for evt in site.data.event_types %}
-						{% if evt.eventtype == event.type %}
-							<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
-							{% break %}
-						{% else %}
-						{% endif %}
-					{% endfor %}
-					<p>{{event.description}}</p>
-				</div>
-				</div>
 			{% endif %}
-  			{% if modulo == '2' or forloop.last %}
-    			</div>
-  			{% endif %}
+			{% if modulo == '2' or forloop.last %}
+		</div>
+		<div class="row">
+			{% endif %}
 
-	{% endfor %}
-</div>
+			{% endfor %}
+		</div>

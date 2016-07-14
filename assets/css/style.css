@@ -265,3 +265,7 @@ a.anchor {
     .intro-message>h1 {
         font-size: 3em;
 }
+
+.event-list .box-content {
+  height: 300px;
+}
