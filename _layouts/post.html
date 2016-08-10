@@ -28,7 +28,7 @@ layout: default
 
         <div class="prev-article row">
 
-          <div class="blog-prev-date col-md-3 col-sm-3">
+          <div class="blog-prev-date col-md-3 col-sm-3 hidden-xs" style="margin-top: 20px;">
             <span class="date">
               {{page.date | date: "%d"}} <small>{{page.date | date: "%B %Y"}}</small>
             </span>
@@ -72,7 +72,7 @@ layout: default
       <!-- /BLOG ARTICLE -->
 
       <!-- BLOG SIDEBAR -->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3" style="margin-top: 20px;">
 
         <!-- RECENT,POPULAR -->
         <div class="widget">
@@ -80,23 +80,10 @@ layout: default
           <!-- TABS -->
           <div class="tabs nomargin-top">
 
-            <!-- tabs -->
-            <ul class="nav nav-tabs nav-justified">
-              <li class="active">
-                <a href="#tab1" data-toggle="tab">
-                  Recent
-                </a>
-              </li>
-              <!--<li>
-                <a href="#tab2" data-toggle="tab">
-                  Recent
-                </a>
-              </li>-->
-            </ul>
-
             <!-- tabs content -->
             <div class="tab-content">
               <div id="tab1" class="tab-pane active">
+                <h4>Other posts</h4>
                 <ul>
                   {% assign items = site.posts | sort: date | reverse %}
                   {% for post in items limit: 11 %}
