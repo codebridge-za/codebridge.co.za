@@ -1,0 +1,128 @@
+---
+layout: default
+title: Blog
+---
+<!-- PAGE TOP -->
+<section class="page-title">
+  <div class="container">
+
+    <header>
+      <h2><!-- Page Title -->
+        {code}bridge <strong>Blog</strong>
+      </h2><!-- /Page Title -->
+    </header>
+
+  </div>      
+</section>
+<!-- /PAGE TOP -->
+
+<!-- CONTENT -->
+<section>
+  <div class="container">
+    <div id="blog" class="row">
+
+      <!-- BLOG ARTICLE LIST -->
+      <div class="col-md-9 col-sm-9">
+        {% assign items = site.posts | sort: date | reverse %}
+        {% for post in paginator.posts %}
+        <!-- article - image -->
+        <div class="prev-article row">
+          <div class="blog-prev-date col-md-3 col-sm-3">
+            <span class="date">
+              {{post.date | date: "%d"}} <small>{{post.date | date: "%B %Y"}}</small>
+            </span>
+            <span class="info hidden-xs">
+              <span class="block"><i class="fa fa-user"></i> By {{post.author}}</span>
+            </span>
+          </div>
+
+          <div class="col-md-9 col-sm-9">
+
+            <h2 class="article-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+
+            {% if post.image == "" or post.image == "none" %}
+            <figure>
+              
+            </figure>
+            {% else %}
+            <!-- image -->
+            <figure>
+              <a href="{{post.url}}">
+                <img src="{{post.image}}" class="img-responsive" alt="blog" />
+              </a>
+            </figure>
+            {% endif %}
+            <!-- blog short preview -->
+            <p>
+              {{post.excerpt}}
+            </p>
+
+            <!-- read more button -->
+            <div class="text-right">
+              <a href="{{post.url}}" class="read-more btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+            </div>
+
+          </div>
+        </div>
+        <!-- /article - image -->
+        {% endfor%}
+        
+        <!-- pagination -->
+        <nav>
+          <ul class="pager">
+            {% if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path }}">Previous</a></li>
+            {% endif %}
+
+            {% if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path }}">Next</a></li>
+            {% endif %}
+          </ul>
+        </nav>        <!-- /pagination -->
+      </div>
+      <!-- /BLOG ARTICLE LIST -->
+
+      <!-- BLOG SIDEBAR -->
+      <div class="col-md-3 col-sm-3">
+
+        <!-- RECENT,POPULAR -->
+        <div class="widget">
+
+          <!-- TABS -->
+          <div class="tabs nomargin-top">
+
+            <!-- tabs -->
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active">
+                <a href="#tab1" data-toggle="tab">
+                  Recent
+                </a>
+              </li>
+            </ul>
+
+            <!-- tabs content -->
+            <div class="tab-content">
+              <div id="tab1" class="tab-pane active">
+                <ul>
+                  {% assign items = site.posts | sort: date | reverse %}
+                  {% for post in items limit: 10 %}
+                  <li><a href="{{post.url}}">{{post.title}}</a> <small>{{post.date | date_to_long_string }}</small></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <!-- /TABS -->
+
+        </div>
+        <!-- /RECENT,POPULAR -->
+
+      </div>
+      <!-- /BLOG SIDEBAR -->
+
+    </div>
+
+  </div>
+</section>
+<!-- /CONTENT -->
