@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<!-- PAGE TOP -->
+<section class="page-title">
+  <div class="container">
+
+    <header>
+
+      <ul class="breadcrumb"><!-- breadcrumb -->
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li class="active"></li>
+      </ul><!-- /breadcrumb -->
+
+    </header>
+
+  </div>      
+</section>
+<!-- /PAGE TOP -->
+
+<!-- CONTENT -->
+<section>
+  <div class="container">
+    <div id="blog" class="row">
+
+      <!-- BLOG ARTICLE -->
+      <div class="col-md-9 col-sm-9">
+
+        <div class="prev-article row">
+
+          <div class="blog-prev-date col-md-3 col-sm-3 hidden-xs" style="margin-top: 20px;">
+            {% for author in site.data.our-team %}
+            {% if author.name == page.author %}
+            <span class="info hidden-xs">
+              <span class="block"><img src="{{author.image}}" width="100%" alt="{{page.author}}"></span>
+            </span>
+            {% else %}
+
+            {% endif %}
+            {% endfor %}
+            <br>
+          </div>
+
+          <div class="col-md-9 col-sm-9">
+
+            <h1>{{page.title}}</h1>
+            <!-- article content -->
+            <article>
+              {{content}}
+            </article>
+            <span class="date">
+              <small>{{page.date | date: "%d"}} {{page.date | date: "%B %Y"}}</small>
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /BLOG ARTICLE -->
+
+      <!-- BLOG SIDEBAR -->
+      <div class="col-md-3 col-sm-3" style="margin-top: 20px;">
+
+        <!-- RECENT,POPULAR -->
+        <div class="widget">
+
+          <!-- TABS -->
+          <div class="tabs nomargin-top">
+
+            <!-- tabs content -->
+            <div class="tab-content">
+              <div id="tab1" class="tab-pane active">
+                <h4>Other posts</h4>
+                <ul>
+                  {% assign items = site.posts | sort: date | reverse %}
+                  {% for post in items limit: 11 %}
+                  {% if post.title == page.title %}
+                  {% else %}
+                  <li><a href="{{post.url}}"> {{post.title}}</a> <small>{{post.date | date_to_long_string }}</small></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <!-- /TABS -->
+
+        </div>
+        <!-- /RECENT,POPULAR -->
+
+      </div>
+      <!-- /BLOG SIDEBAR -->
+
+    </div>
+  </div>
+</section>
+<!-- /CONTENT -->
