@@ -29,9 +29,6 @@ layout: default
         <div class="prev-article row">
 
           <div class="blog-prev-date col-md-3 col-sm-3 hidden-xs" style="margin-top: 20px;">
-            <span class="date">
-              {{page.date | date: "%d"}} <small>{{page.date | date: "%B %Y"}}</small>
-            </span>
             {% for author in site.data.our-team %}
             {% if author.name == page.author %}
             <span class="info hidden-xs">
@@ -42,9 +39,6 @@ layout: default
             {% endif %}
             {% endfor %}
             <br>
-            <span class="info hidden-xs">
-              <span class="block"><i class="fa fa-user"></i> {{page.author}}</span>
-            </span>
           </div>
 
           <div class="col-md-9 col-sm-9">
@@ -54,15 +48,9 @@ layout: default
             <article>
               {{content}}
             </article>
-
-            <!-- SOCIAL -->
-            <p class="socials">
-              <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" class="rounded-icon social fa fa-facebook"></a>
-
-              <a href="https://twitter.com/share?text={{ page.title }}&url={{ site.url}}{{ page.url }}" class="rounded-icon social fa fa-twitter" target="_blank"><!-- twitter --></a>
-
-              <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&source={{ site.title }}" class="rounded-icon social fa fa-linkedin" target="_blank"><!-- linkedin --></a>
-            </p>
+            <span class="date">
+              <small>{{page.date | date: "%d"}} {{page.date | date: "%B %Y"}}</small>
+            </span>
 
           </div>
 
