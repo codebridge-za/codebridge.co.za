@@ -19,6 +19,6 @@ Teams will compete for a cash prize of R20, 000 and all projects are guaranteed 
 
 Entries will open next Thursday, September 1 and will close on Tuesday, September 13.
 
-The project will run from September 19, 2016 - November 26, 2016. Teams must be available to attend an open pitch session on September 6 in either Cape Town or Durban (depending on where you and the organisation you’d like to work with are based), as well as workshops, training, research, planning and check-in sessions throughout. 
+Teams must be available to attend an open pitch session on September 6 in Cape Town and the following week (date TBC) in Durban (depending on where you and the organisation you’d like to work with are based), as well as workshops, training, research, planning and check-in sessions throughout.
 
 You can RSVP and find out more about the venues <a href="/allevents/storytelling-challenge.html">here</a>. 
