@@ -2,60 +2,56 @@
 layout: default 
 title: Events
 ---
-
-<div class="container contact">
-	<div class="row">
-		<a class="anchor" name="Upcoming Events"></a><h3>Upcoming Events</h3>
-	</div>
-
-	{% assign current_time = site.time | date: "%m%d" %}
-	{% for event in site.allevents limit 3 %}
-	{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-	{% if modulo == '0' or forloop.first %}
-	<div class="row event-list">
-		{% endif %}
-		{% assign expires = event.ev-date | date: "%m%d" %}
-		{% if expires > current_time %}
-		<div class="col-md-4">
-			<div class="box-content thumbnail">
-				<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
-				<img src="{{event.image}}" alt="{{event.title}}" width="100%">
-				<h4><a href="{{event.link}}">{{event.title}}</a></h4>
-				{% for evt in site.data.event_types %}
-				{% if evt.eventtype == event.type %}
-				<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
-				{% break %}
-				{% else %}
-				{% endif %}
-				{% endfor %}
-				<p>{{event.description}}</p>
+<section class="events">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<a class="anchor" name="Upcoming Events"></a><h3>Upcoming Events</h3>
 			</div>
 		</div>
-		{% else %}
-		{% continue %}
-		{% endif %}
-
-	</div>
-	<div class="row">
-	
-		{% endfor %}
-
-		<br><hr>
-		<div>
-			<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
+		<div class="row">
+			{% assign current_time = site.time | date: "%m%d" %}
+			{% for event in site.allevents limit 3 %}
+			{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
+			{% if modulo == '0' or forloop.first %}
+			{% endif %}
+			{% assign expires = event.ev-date | date: "%m%d" %}
+			{% if expires > current_time %}
+			<div class="col-md-4">
+				<div class="box-content thumbnail">
+					<h4><span class="label label-success">{{event.ev-date | date_to_long_string}}</span></h4>
+					<a href="{{event.link}}"><img src="{{event.image}}" alt="{{event.title}}" width="100%"></a>
+					<h4><a href="{{event.link}}">{{event.title}}</a></h4>
+					{% for evt in site.data.event_types %}
+					{% if evt.eventtype == event.type %}
+					<h4><a class="label label-default" href="/event-types.html" data-toggle="tooltip" data-placement="top" title="{{evt.description}}"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
+					{% break %}
+					{% else %}
+					{% endif %}
+					{% endfor %}
+					<p>{{event.description}}</p>
+				</div>
 			</div>
-
+			{% else %}
+			{% continue %}
+			{% endif %}
+			{% endfor %}
+			<div class="col-xs-12">
+				<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
+			</div>
+		</div>
+		<div class="row">
 		{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
 		{% if modulo == '0' or forloop.first %}
-		<div class="row event-list">
 			{% endif %}
-			{% for event in site.allevents reverse %}
+			{% assign order = site.allevents | sort: 'ev-date' | reverse %}		
+			{% for event in order %}			
 			{% assign expires = event.ev-date | date: "%m%d" %}
 			{% if expires < current_time %}
 			<div class="col-md-4">
 				<div class="box-content thumbnail">
-					<h4><span class="label label-success">Date: {{event.ev-date | date_to_long_string}}</span></h4>
-					<img src="{{event.image}}" alt="{{event.title}}" width="100%">
+					<h4><span class="label label-success">{{event.ev-date | date_to_long_string}}</span></h4>
+					<a href="{{event.link}}"><img src="{{event.image}}" alt="{{event.title}}" width="100%"></a>
 					<h4><a href="{{event.link}}">{{event.title}}</a></h4>
 					{% for evt in site.data.event_types %}
 					{% if evt.eventtype == event.type %}
@@ -75,3 +71,5 @@ title: Events
 
 			{% endfor %}
 		</div>
+	</div>
+</section>

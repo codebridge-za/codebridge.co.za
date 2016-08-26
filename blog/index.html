@@ -2,16 +2,11 @@
 layout: default
 title: Blog
 ---
-<!-- PAGE TOP -->
-<section class="page-title" style="margin-top: 60px">
+<section class="contact">
   <div class="container">
     <h3>Read our posts</h3>
-  </div>      
-</section>
-<!-- /PAGE TOP -->
+  </div>
 
-<!-- CONTENT -->
-<section>
   <div class="container">
     <div id="blog">
       <!-- BLOG ARTICLE LIST -->
@@ -19,7 +14,7 @@ title: Blog
       {% for post in items limit: 10 %}
       <div class="row post-row" style="padding: 10px 0 10px 0; border-bottom: 1px solid #CCC; ">
         <div class="col-md-2 col-sm-2">
-          <img src="{{post.image}}" style="width:100%">
+          <a href="{{post.url}}"><img src="{{post.image}}" width="100%"></a>
         </div>
         <div class="col-md-8 col-sm-8">
               <a style="font-size:1.3em" href="{{post.url}}">{{post.title}}</a> <small>{{post.date | date_to_long_string }}</small>

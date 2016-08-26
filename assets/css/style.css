@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400);
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif:400';
 html,
 body {
     font-family: 'Open Sans', sans-serif;
@@ -58,11 +58,16 @@ a.anchor {
     margin: 60px auto;
     min-height: calc(100% - 180px);
 }
+.post {
+    margin: 15px auto;
+    min-height: calc(100% - 146px);
+}
 .partners {
     margin: 60px auto;
     min-height: calc(100% - 180px);
 }
 .events {
+    margin: 60px auto;    
     padding-bottom: 15px;
 }
 
@@ -266,6 +271,3 @@ a.anchor {
         font-size: 3em;
 }
 
-.event-list .box-content {
-  height: 300px;
-}
