@@ -4,10 +4,10 @@ author: Roxanne Joseph
 title: We challenge you to re-imagine storytelling
 excerpt: |
     We're challenging journalists, developers, students, activists, economists - pretty much anyone who wants to tell a story - to submit your innovative project idea and potentially change South Africa with a story
-image: ../images/blog/storytelling.jpg
+image: /images/blog/storytelling.jpg
 ---
 
-<img src="../images/blog/storytelling.jpg" style="width:100%">
+<img src="/images/blog/storytelling.jpg" style="width:100%">
 
 We have moved into the digital and information age. This means that the way we tell stories has evolved from just telling them to getting the reader involved. This is what Re-Imagine Storytelling is all about. It brings together elements of data, tech, journalism and activism. It goes beyond just reporting issues of social justice to actively trying to solve them.
 
