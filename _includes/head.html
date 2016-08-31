@@ -10,7 +10,7 @@
     <meta property="og:url" content="{{ site.url }}" />
     <meta property="og:image" content="{% if page.image %}{{page.image | prepend: site.url}}{% else %}{{ 'images/header.jpg' | prepend: site.url }}{% endif %}">
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.og_description }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.og_description }}{% endif %}" />
     <meta property="og:site_name" content="{code}bridge" />
     <meta property="place:location:latitude" content="{{ site.og_latitude }}" />
     <meta property="place:location:longitude" content="{{ site.og_longitude }}" />
@@ -18,7 +18,7 @@
     <meta name="twitter:site" content="{{ site.twitter_username }}" />
     <meta name="twitter:creator" content="{{ site.twitter_username }}" />
     <meta name="twitter:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.og_description }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.og_description }}{% endif %}">
     <meta name="twitter:url" content="{{ site.url }}" />
     <meta name="twitter:image" content="{% if page.image %}{{page.image | prepend: site.url}}{% else %}{{ 'images/header.jpg' | prepend: site.url }}{% endif %}">
 
