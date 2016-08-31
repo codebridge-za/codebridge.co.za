@@ -266,8 +266,46 @@ a.anchor {
     min-height: calc(100vh - 100px);
 }
 
+.event-label .label, .type-label .label, .event-location .label {
+    border-radius: 0;
+}
+
+.event-label {
+    font-family: 'Droid Serif', serif;   
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 10px;
+}
+
+.event-location {
+    font-family: 'Droid Serif', serif;   
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 38px;
+}
+
+.label-date {
+    background-color: #a94442;
+    border-radius: 0;
+}
+
+.label-location {
+    background-color: #777;
+    border-radius: 0;
+}
+
+.label-type {
+    color: black;    
+}
+
+.well {
+    border-radius: 0;
+}
+
 @media(max-width:760px) {
     .intro-message>h1 {
         font-size: 3em;
+    }
 }
-

@@ -1,7 +1,7 @@
 ---
 - eventtype: Dataquest
   description: Dataquests are an opportunity for teams to work on a specific problem surfaced from an accountability workshop.
-                These could range from story angels, interesting visualisations to prototype apps which could be further developed either through mentorship opportunities or via community evenings.
+                These could range from story angles, interesting visualisations to prototype apps which could be further developed either through mentorship opportunities or via community evenings.
   icon: fa fa-database fa-fw
 
 - eventtype: Movie Evening
