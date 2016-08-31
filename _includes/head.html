@@ -7,7 +7,7 @@
     <!-- OPEN-GRAPH -->
     <meta property="og:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
     <meta property="og:image" content="{% if page.image %}{{page.image | prepend: site.url}}{% else %}{{ 'images/header.jpg' | prepend: site.url }}{% endif %}">
     <meta property="og:locale" content="en_GB" />
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.og_description }}{% endif %}" />
@@ -19,7 +19,7 @@
     <meta name="twitter:creator" content="{{ site.twitter_username }}" />
     <meta name="twitter:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.og_description }}{% endif %}">
-    <meta name="twitter:url" content="{{ site.url }}" />
+    <meta name="twitter:url" content="{{ page.url | prepend: site.url }}" />
     <meta name="twitter:image" content="{% if page.image %}{{page.image | prepend: site.url}}{% else %}{{ 'images/header.jpg' | prepend: site.url }}{% endif %}">
 
     <link href="{{ 'favicon.ico' | prepend: site.baseurl }}" rel="shortcut icon" />
