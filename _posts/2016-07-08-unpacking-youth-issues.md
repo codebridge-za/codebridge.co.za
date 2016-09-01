@@ -3,7 +3,7 @@ layout: post
 title: Unpacking Youth Issues
 date: 2016-07-08
 excerpt: Forty years after school pupils protested for their right to education, we brought civil society organisations and technologists together to see how technology can help solve the challenges youth are facing today.
-image: http://code4sa.org/images/blog/youth-issues.jpg
+image: /images/blog/youth-issues.jpg
 author: Lenina Rassool
 ---
 
