@@ -16,7 +16,7 @@ title: Events
 			{% if modulo == '0' or forloop.first %}
 			{% endif %}
 			{% assign expires = event.ev-date | date: "%m%d" %}
-			{% if expires > current-time %}
+			{% if expires >= current-time %}
 			<div class="col-md-4">
 				<div class="box-content thumbnail">
 					<div>
