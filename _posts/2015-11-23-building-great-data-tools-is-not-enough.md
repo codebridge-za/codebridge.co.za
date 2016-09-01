@@ -4,7 +4,7 @@ title: Building great data tools is not enough
 date: 2015-11-23
 excerpt: |
    All too often powerful, simple-to-use data tools for journalists are built and, after an initial buzz, they end up hardly being used by the very users they target.
-image: http://code4sa.org/images/blog/cc-img-ray-blog.jpg
+image: /images/blog/cc-img-ray-blog.jpg
 author: Raymond Joseph
 ---
 
