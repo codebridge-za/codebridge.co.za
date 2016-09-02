@@ -286,6 +286,14 @@ a.anchor {
     top: 38px;
 }
 
+.type-label {
+    font-family: 'Droid Serif', serif;   
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 66px;
+}
+
 .label-date {
     background-color: #a94442;
     border-radius: 0;
@@ -304,7 +312,27 @@ a.anchor {
     border-radius: 0;
 }
 
-@media(max-width:760px) {
+ul.eventlist li {
+    display: block;
+    float: left;
+    width: 33.33%;
+    height: 375px;
+    position: relative;
+}
+
+@media(max-width:768px) {
+    ul.eventlist li {
+        width: 50%;
+    }
+}
+
+@media(max-width:425px) {
+    ul.eventlist li {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
     .intro-message>h1 {
         font-size: 3em;
     }
