@@ -1,0 +1,18 @@
+<li>
+	<div class="box-content thumbnail">
+		<div>
+			<h4 class="event-label"><span class="label label-date">{{include.event.ev-date | date_to_long_string}}</span></h4>
+			<h4 class="event-location"><span class="label label-default">{{include.event.location}}</span></h4>
+			{% for evt in site.data.event_types %}
+			{% if evt.eventtype == include.event.type %}
+			<h4 class="type-label"><a class="label label-default" href="/event-types.html"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{include.event.type}}</a></h4>
+			{% break %}
+			{% else %}
+			{% endif %}
+			{% endfor %}
+			<a href="{{event.link}}"><img src="{{event.image}}" alt="{{event.title}}" width="100%"></a>
+		</div>					
+		<h4><a href="{{event.link}}">{{include.event.title}}</a></h4>	
+		<p>{{include.event.description}}</p>
+	</div>
+</li>

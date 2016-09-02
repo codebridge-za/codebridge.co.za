@@ -4,99 +4,46 @@ title: Events
 ---
 <section class="events">
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<a class="anchor" name="Upcoming Events"></a><h3>Upcoming Events</h3>
-			</div>
-		</div>
-		<div class="row">
-			{% assign current-time = site.time | date: "%m%d" %}
-			{% for event in site.allevents limit 3 %}
-			{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-			{% if modulo == '0' or forloop.first %}
-			{% endif %}
+		<a class="anchor" name="Upcoming Events"></a>
+		<h3>Upcoming Events</h3>
+
+		<ul class="eventlist list-unstyled clearfix">
+		{% assign current-time = site.time | date: "%m%d" %}
+		{% for event in site.allevents %}
 			{% assign expires = event.ev-date | date: "%m%d" %}
 			{% if expires >= current-time %}
-			<div class="col-md-4">
-				<div class="box-content thumbnail">
-					<div>
-						<h4 class="event-label"><span class="label label-date">{{event.ev-date | date_to_long_string}}</span></h4>
-						<h4 class="event-location"><span class="label label-default">{{event.location}}</span></h4>
-						<a href="{{event.link}}"><img src="{{event.image}}" alt="{{event.title}}" width="100%"></a>
-					</div>					
-					<h4><a href="{{event.link}}">{{event.title}}</a></h4>	
-					{% for evt in site.data.event_types %}
-					{% if evt.eventtype == event.type %}
-					<h4 class="type-label"><a class="label label-default" href="/event-types.html"><i class="{{evt.icon}}" aria-hidden = "true"></i> {{event.type}}</a></h4>
-					{% break %}
-					{% else %}
-					{% endif %}
-					{% endfor %}
-					<p>{{event.description}}</p>
-				</div>
-			</div>
-			{% else %}
-			{% continue %}
+			  {% include event.html event=event %}
 			{% endif %}
-			{% endfor %}
-		</div>		
+		{% endfor %}
+		</ul>		
 
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="well well-sm">
-					<h4 style="margin-top: 5px;">Each month we run the following events:</h4>
-					<p>
-						<ul class="fa-ul" style="margin-left: 0; margin-bottom: 0;">
-							<li><i class="fa fa-database fa-fw"></i> 1 x <b>Dataquest</b>: an opportunity for teams to work on a specific problem surfaced from an accountability workshop</li>
-							<li><i class="fa fa-film fa-fw"></i> 1 x <b>Movie Evening</b>: a casual, informative evening where members gather to watch an informative film aligned to interesting social issues</li>
-							<li><i class="fa fa-users fa-fw"></i> 2 x <b>Community Evenings</b>: a chance for the Codebridge community to get together and work on projects</li>
-							<li><i class="fa fa-bar-chart fa-fw"></i> 1 x <b>Data viz meetup</b>: a place for people to showcase and discuss their data visualisations</li>
-							<li><i class="fa fa-building fa-fw"></i> 1 x <b>Accountability Workshop</b>: a workshop to understand a specific problem space, as guided by the monthly theme</li>
-						</ul>
-					</p>
-					<p>
-						<a class="btn btn-default" href="/event-types.html">More information</a>
-					</p>
-				</div>
-			</div>
+		<div class="well well-sm">
+			<h4 style="margin-top: 5px;">Each month we run the following events:</h4>
+			<p>
+				<ul class="fa-ul" style="margin-left: 0; margin-bottom: 0;">
+					<li><i class="fa fa-database fa-fw"></i> 1 x <b>Dataquest</b>: an opportunity for teams to work on a specific problem surfaced from an accountability workshop</li>
+					<li><i class="fa fa-film fa-fw"></i> 1 x <b>Movie Evening</b>: a casual, informative evening where members gather to watch an informative film aligned to interesting social issues</li>
+					<li><i class="fa fa-users fa-fw"></i> 2 x <b>Community Evenings</b>: a chance for the Codebridge community to get together and work on projects</li>
+					<li><i class="fa fa-bar-chart fa-fw"></i> 1 x <b>Data viz meetup</b>: a place for people to showcase and discuss their data visualisations</li>
+					<li><i class="fa fa-building fa-fw"></i> 1 x <b>Accountability Workshop</b>: a workshop to understand a specific problem space, as guided by the monthly theme</li>
+				</ul>
+			</p>
+			<p>
+				<a class="btn btn-default" href="/event-types.html">More information</a>
+			</p>
 		</div>
 
-		<div class="row">
-			<div class="col-xs-12">
-				<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
-			</div>
-		</div>
-		<div class="row">
-		{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
-		{% if modulo == '0' or forloop.first %}
-			{% endif %}
-			{% assign order = site.allevents | sort: 'ev-date' | reverse %}		
-			{% for event in order %}			
+
+		<a class="anchor" name="pastevents"></a><h3>Past Events</h3>
+
+		<ul class="eventlist list-unstyled clearfix">
+		{% assign order = site.allevents | sort: 'ev-date' | reverse %}		
+		{% for event in order %}			
 			{% assign expires = event.ev-date | date: "%m%d" %}
 			{% if expires < current-time %}
-			<div class="col-md-4">
-				<div class="box-content thumbnail">
-					<div>
-						<h4 class="event-label"><span class="label label-date">{{event.ev-date | date_to_long_string}}</span></h4>
-						<h4 class="event-location"><span class="label label-default">{{event.location}}</span></h4>
-						<a href="{{event.link}}"><img src="{{event.image}}" alt="{{event.title}}" width="100%"></a>
-					</div>
-					{% for evt in site.data.event_types %}
-					{% if evt.eventtype == event.type %}									
-					<h4><a href="{{event.link}}">{{event.title}}</a> <a class="label-type" href="/event-types.html"><i class="{{evt.icon}}" aria-hidden="true"></i></a></h4>
-					{% break %}
-					{% else %}
-					{% endif %}
-					{% endfor %}
-					<p>{{event.description}}</p>
-				</div>
-			</div>
+			  {% include event.html event=event %}
 			{% endif %}
-			{% if modulo == '2' or forloop.last %}
-		</div>
-		<div class="row">
-			{% endif %}
-			{% endfor %}
-		</div>
+		{% endfor %}
+		</ul>
 	</div>
 </section>
