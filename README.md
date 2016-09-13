@@ -1,7 +1,7 @@
-codebridge-za.github.io
-=======================
+codebridge.org.za
+=================
 
-This website is generated using [Jekyll](https://jekyllrb.com/), with a [Bootstrap 3](https://getbootstrap.com/) framework, and is hosted by Github that points to a custom domain. We welcome any and all contributions, be sure to check out if there are any pending [issues](https://github.com/codebridge-za/codebridge-za.github.io/issues). 
+This website is generated using [Jekyll](https://jekyllrb.com/), with a [Bootstrap 3](https://getbootstrap.com/) framework, and is hosted by Github that points to a custom domain. We welcome any and all contributions, be sure to check out if there are any pending [issues](https://github.com/codebridge-za/codebridge-za.github.io/issues).
 
 ## Getting started
 ### Jekyll
@@ -18,7 +18,7 @@ We also have a [Vagrant](http://www.vagrantup.com/) configuration that will get 
 
     vagrant up
 
-Your first run might take a few minutes, as the configuration will download [Ubuntu (Precise Pangolin 64-bit)](http://releases.ubuntu.com/12.04/), then install Jekyll and any dependencies. 
+Your first run might take a few minutes, as the configuration will download [Ubuntu (Precise Pangolin 64-bit)](http://releases.ubuntu.com/12.04/), then install Jekyll and any dependencies.
 
 Once complete, Vagrant will start Jekyll by running `jekyll serve`. You can then see a preview at `http://localhost:4000/` in a web browser.
 
@@ -31,3 +31,7 @@ You can get shell access through the following command
 Please **do not** contribute with an updated version of Bootstrap or jQuery, as we need to support IE 8 and beyond. The fourth version of Bootstrap has dropped IE 8/9 support and jQuery 2x does not work on older browsers.
 
 Our base users are South Africans, at [least 22%](http://gs.statcounter.com/#browser-ZA-monthly-201411-201511) of the connected population still use IE.
+
+## codebridge.co.za
+
+codebridge.co.za is moving to codebridge.org.za. To facilitate this, we're serving redirects to codebridge.org.za. codebridge.co.za is serving from the gh-pages branch just in case someone accidentally pushes changes intended for condebridge.org.za to the old remote.
