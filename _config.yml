@@ -27,4 +27,6 @@ exclude: [CNAME, Vagrantfile, README.md]
 collections:
   allevents:
     output: true
-  
+
+gems:
+  - jekyll-redirect-from
